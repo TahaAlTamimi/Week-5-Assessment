@@ -12,11 +12,13 @@ Ex:  hello(null) => null
 
 */
 
-function hello() {
+function hello(name) {
   // WRITE YOUR CODE UNDER THIS LINE  
+  var x="hello" + name;
+  console.log(x);
 
 }
-
+hello(" mohammad!");
 
 /* Q2:
 Create a function called calculateTax
@@ -32,12 +34,16 @@ Ex: calculateTax(100,0.15)
 => "You got 100 JD from sales, you should pay 15 JD for tax and you will have 85 JD as net sales."
 */
 
-function calculateTax() {
+function calculateTax(sale,tax) {
   // WRITE YOUR CODE UNDER THIS LINE 
+var sale=sale;
+var x=sale*tax ;
 
+var s=sale-x;
+// console.log(x,s);
+return "you got"+sale+"JD from sales ,you should pay "+x+"JD for tax and you will have "+s+"JD as net sales."
 }
-
-
+console.log(calculateTax(500,.16))
 /* Q3:
 Using while
 Create a function called repeatChar
@@ -52,10 +58,17 @@ Ex: repeatChar("a",2); => "a, A"
 Ex: repeatChar("C",5); => "C, c, C, c, C"
 */
 
-function repeatChar() {
+function repeatChar(str,number) {
   // WRITE YOUR CODE UNDER THIS LINE         
+var x=""
+while(number>0){
+x=x+ str + "";
 
+	number=number-1;
 }
+return x;
+}
+repeatChar("a",3)
 
 
 /* Q4:
@@ -72,9 +85,16 @@ Ex: stringToCapital("Are you a student in coding ACADEMY by ORANGE ?")
 => "ARE YOU A STUDENT IN CODING ACADEMY BY ORANGE ?"
 */
 
-function stringToCapital() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function stringToCapital(str) {
+  // WRITE YOUR CODE UNDER THIS LINE 
+          if (str.length!==0){
+          	// str.length=str.length-1
+          	return str.toUpperCase(str)
 
+          }
+
+return (str.toUpperCase(str)+str.length-1)
 }
-
+console.log(stringToCapital("taha"))
+console.log(stringToCapital("Jouza"))
 // Good luck :)
